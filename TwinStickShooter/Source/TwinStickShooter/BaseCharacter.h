@@ -12,18 +12,18 @@ class TWINSTICKSHOOTER_API ABaseCharacter : public ACharacter
     
 public:
     //Make a health property.
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Base Character")
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseCharacter")
     float Health = 100;
     
     //Make an isDead property.
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "Base Character")
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = "BaseCharacter")
     bool isDead = false;
     
     //Calculate death function (helper).
     virtual void CalculateDead();
     
     //Calculate health function.
-    UFUNCTION(BlueprintCallable, Category = "Base Character")
+    UFUNCTION(BlueprintCallable, Category = "BaseCharacter")
     virtual void CalculateHealth(float delta);
     
 #if WITH_EDITOR
